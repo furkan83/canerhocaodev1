@@ -1,6 +1,6 @@
-/*Craps adlı oyun:İki zar atılır,toplam 7 veya 11 gelirse oyuncu kazanır.
-2,3 veya 12 gelirse kaybeder.Öbür toplamlar ise oyuncunun puanı olacaktır.
-Bu durumda oyuncu 7 atmadan önce kendi puanını tutturmalı. */
+/*Craps adli oyun:İki zar atilir,toplam 7 veya 11 gelirse oyuncu kazanir.
+2,3 veya 12 gelirse kaybeder.Zarlarin toplami bahsi gecen sayilardan farkli ise kurallar degisir,bu toplam oyuncunun puani olacaktir.
+Bu durumda oyuncu 7 atmadan önce kendi puanini tutturmali */
 #include <stdio.h>
 #include <stdlib.h>
 int toplam(int i,int a,int b);
@@ -11,7 +11,7 @@ unsigned seed;
 printf("Seed giriniz: ");
 scanf("%u", &seed);
 srand(seed);
-a = toplam(1,0,0); //sum
+a = toplam(1,0,0); 
 if(a==7 || a==11) printf("Oyunu kazandiniz!");
 else if(a==2 || a==3 || a==12) printf("Oyunu kaybettiniz!");
 else{
@@ -25,7 +25,7 @@ else{
             printf("Oyunu kazandiniz!");
             break;
         }
-        else if(a==7) printf("Oyunu kaybettiniz.");
+        if(a==7) printf("Oyunu kaybettiniz.");
         }
         }
     else printf("Oyunu iptal ettiniz.");
